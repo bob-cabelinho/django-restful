@@ -1,6 +1,8 @@
 import requests
 
-endpoint = "http://localhost:8000/api/products/10/delete/"
+product_id = input("Product ID:>")
+
+endpoint = f"http://localhost:8000/products/{product_id}/delete/"
 
 response = requests.delete(endpoint)
 print(response.json)

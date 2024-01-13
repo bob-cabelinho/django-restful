@@ -1,6 +1,8 @@
 import requests
 
-endpoint = 'http://localhost:8000/products/9/'
+product_id = input("Product ID:>")
+
+endpoint = f"http://localhost:8000/products/{product_id}/"
 
 response = requests.get(endpoint)
 

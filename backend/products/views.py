@@ -107,7 +107,14 @@ def productAltView(request, pk=None, *args, **kwargs):
         if serializer.is_valid(raise_exception=True):
             title = serializer.validated_data.get("title")
             price = serializer.validated_data.get("price")
+            description = serializer.validated_data.get("description")
             serializer.save()
     
-    if method == "DELETE":
+    if method == "UPDATE":
         serializer = ProductSerializer(data=request.data)
+
+        if serializer.is_valid(raise_exception=True):
+            title = serializer.validated_data.get("title")
+            price = serializer.validated_data.get("price")
+            description = serializer.validated_data.get("description")
+            serializer.save()

@@ -1,6 +1,6 @@
-import requests
+import requests, json
 
-endpoint = "http://localhost:8000/api/products/"
+endpoint = "http://localhost:8000/products/"
 
 response = requests.get(endpoint)
-print(response)
+print(json.loads(response.text))

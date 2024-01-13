@@ -2,10 +2,16 @@ import requests
 
 endpoint = "http://localhost:8000/api/"
 
+title = input("Title:>")
+price = input("Price:>")
+description = input("Descriptions:>")
+if description is not None:
+    description = title+"__product"
+
 data = {
-    "title": "garrafa",
-    "price": 123.00,
-    "description": "fdkaiusdoi"
+    "title": title,
+    "price": price,
+    "description": description
 }
 
 response = requests.post(
