@@ -134,5 +134,7 @@ REST_FRAMEWORK = {
 
     "DEFAULT_PERMISSIONS_CLASSES": [
         "rest_framework.permissions.IsAuthenticatednOrReadOnly"
-    ]
+    ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 10
 }
