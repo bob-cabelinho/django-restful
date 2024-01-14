@@ -6,7 +6,7 @@ title = input("Title:>")
 price = input("Price:>")
 description = input("Descriptions:>")
 
-endpoint = f"http://localhost:8000/products/{product_id}/update/"
+endpoint = f"http://localhost:8000/api/products/{product_id}/update/"
 
 data = {
     "title": title,
